@@ -1,11 +1,16 @@
 
-fun main(args: Array<String>) {
+fun main() {
 
-//    println("Hello!\nWelche Aufgabe soll gelöst werden?")
-//    val aufgabe = readLine()
-//    when(aufgabe) {
-//        "3A" -> {
-            MonoalphabetischeSubstitution.solve(Constants().HASH_3A)
-//        }
-//    }
+    println("Hallo!\nWelche Aufgabe soll gelöst werden (3A, 5A)?\n")
+    when(readLine()?.uppercase()) {
+        "3A" -> {
+            MonoalphabetischeSubstitution().solve()
+        }
+        "5A" -> {
+            RsaCrack().solve()
+        }
+        else -> {
+            return
+        }
+    }
 }
